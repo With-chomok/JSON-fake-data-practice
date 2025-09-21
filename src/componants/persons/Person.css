@@ -1,0 +1,14 @@
+.data-cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+
+}
+.data-card{
+    border: 1px yellowgreen dotted;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+    
+    
+}

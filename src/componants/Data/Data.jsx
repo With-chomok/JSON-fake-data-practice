@@ -1,6 +1,6 @@
 import React, { Suspense, use } from "react";
 import DataShow from "./DataShow";
-
+import '../persons/Person.css'
 const Data = ({ jsonDataPromise }) => {
   const persons = use(jsonDataPromise);
   // console.log(persons);
@@ -8,9 +8,11 @@ const Data = ({ jsonDataPromise }) => {
     <div>
       <h1>fetching data</h1>
       <h1>All data count: {persons.length}</h1>
-      {persons.map((person) => (
+      <div className="data-cards">
+        {persons.map((person) => (
         <DataShow key={person.id} person={person}></DataShow>
       ))}
+      </div>
     </div>
   );
 };
